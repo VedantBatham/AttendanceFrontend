@@ -1,0 +1,23 @@
+<!-- Header section -->
+<div class="planner-header d-flex justify-content-between bg-light rounded-1">
+    <div class="text-head m-2">
+        <h2 style="color: #1d2030;">Schedule Planner</h2>
+    </div>
+    <button class="btn btn-primary m-2" (click)="onAddPlan()">
+        <i class="fa-solid fa-calendar-plus me-1"></i> Add Plan
+    </button>
+</div>
+
+
+
+<div class="planner-cards d-flex flex-column align-items-center m-5">
+    <div class="container text-secondary" *ngIf="plans.length==0">
+        <h3>No Plans Exist</h3>
+    </div>
+
+    <div class="card mb-3 w-50 bg-light" *ngFor="let plan of plans">
+        <div class="card-title p-2">{{plan.title}}</div>
+        <div class="card-body p-2">{{plan.description}}</div>
+        
+    </div>
+</div>

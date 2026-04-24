@@ -1,0 +1,45 @@
+<div class="student-dashboard">
+
+  <header class="topbar">
+      <h1>Student Dashboard</h1>
+      <div class="top-actions">
+        <button class="bell-btn">
+          <i class="fa fa-bell"></i>
+        </button>
+        <button class="profile-btn">
+          <i class="fa fa-user"></i> Profile
+        </button>
+        <button class="btn">
+          <button class="btn btn-outline-danger" (click)="logout()">
+            <i class="fas fa-right-from-bracket"></i> Logout
+          </button>
+        </button>
+      </div>
+    </header>
+  <section class="analytics-card">
+    <h2>Attendance Overview</h2>
+    <div class="attendance-progress">
+        <div class="circle" [style.background]="'conic-gradient(#4CAF50 ' + overallAttendance + '%, #e0e0e0 0)'">
+            <span class="percent text-dark">{{ overallAttendance }}%</span>
+        </div>
+
+        <p>Your overall attendance</p>
+    </div>
+  </section>
+
+  <!-- Topics & Resources -->
+  <section class="topics-section">
+    <h2>Recent Classes & Resources</h2>
+
+    <div class="topic-card " *ngFor="let plan of plans">
+      <div class="topic-info" >
+        <h3>{{plan.title}}</h3>
+        <p><strong>Description:{{plan.description}}</strong> </p>
+      </div>
+      <button class="resource-btn" (click)="toViewResource(plan)">
+        <i class="fa-solid fa-folder-open"></i> View Resources
+      </button>
+    </div>
+  </section>
+
+</div>

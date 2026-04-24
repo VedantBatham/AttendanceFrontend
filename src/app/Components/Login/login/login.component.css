@@ -1,0 +1,54 @@
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #0d1117;
+}
+
+@property --angle{
+  syntax:"<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.content-wrapper{
+  
+  background-color: rgba(10, 11, 24, 0.92);
+  width: 400px;
+  height: 400px;
+  position:relative;
+  border-radius:10px;
+  padding:2em;
+}
+
+
+.content-wrapper::after , .content-wrapper::before{
+  content: '';
+  position:absolute;
+  height: 102%;
+  width:102%;
+  z-index:-1;
+  padding: 10px;
+  border-radius: 10px;
+  transform:translate(-9%,-85.5%);
+  background:conic-gradient(from var(--angle),#00ff00, hsl(256, 100%, 50%), hsl(312, 100%, 50%),#00ff00);
+  animation: rotateBg 3s linear infinite;
+}
+
+.content-wrapper::before{
+  filter:blur(1.5rem);
+  opacity:0.5%;
+  
+}
+
+
+@keyframes rotateBg {
+  from{
+    --angle:0deg;
+  }
+  to{
+    --angle:360deg;
+  }
+}

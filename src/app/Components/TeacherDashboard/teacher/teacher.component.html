@@ -1,0 +1,71 @@
+<div class="teacher-dashboard">
+  <aside class="sidebar">
+    <div class="logo">LOGO</div>
+    <nav>
+      <ul>
+        <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
+        <li routerLink="/students" routerLinkActive="active">Students</li>
+        <li routerLink="/planner" routerLinkActive="active">Planner</li>
+        <li routerLink="/attendance" routerLinkActive="active">Attendance</li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <main class="main-content ">
+    <header class="topbar">
+      <h1>Teacher Dashboard</h1>
+      <div class="top-actions">
+        <button class="bell-btn">
+          <i class="fa fa-bell"></i>
+        </button>
+        <button class="profile-btn">
+          <i class="fa fa-user"></i> Profile
+        </button>
+        <button class="btn">
+          <button class="btn btn-outline-danger" (click)="logout()">
+            <i class="fas fa-right-from-bracket"></i> Logout
+          </button>
+        </button>
+      </div>
+    </header>
+
+    <section class="quick-actions">
+        <div class="card" routerLink="/planner">
+          <i class="fa fa-calendar-plus"></i>
+          <h3>Add Planner</h3>
+        </div>
+        <div class="card">
+          <i class="fa fa-users"></i>
+          <h3>Students</h3>
+        </div>
+        <div class="card" (click)="markAttendance()">
+            <i class="fa-solid fa-user-check"></i>
+            <h3>Mark Attendance</h3>
+        </div>
+    </section>
+
+    <section class="students-table">
+      <h2>Students</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example Row -->
+          <tr *ngFor="let student of students">
+            <td>{{student.rollNumber}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.attendancePercentage}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</div>

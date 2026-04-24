@@ -1,0 +1,42 @@
+<div class="container">
+    <!-- Add Plan Form -->
+    <div class="card mt-4 p-3">
+    <h4 class="mb-3">Add New Plan</h4>
+
+    <form (ngSubmit)="onSavePlan()" #planForm="ngForm">
+        <!-- Title -->
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+            type="text"
+            id="title"
+            name="title"
+            class="form-control"
+            required
+            [(ngModel)]="newPlan.title"
+            placeholder="Enter plan title"
+        />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+            id="description"
+            name="description"
+            class="form-control"
+            rows="4"
+            required
+            [(ngModel)]="newPlan.description"
+            placeholder="Enter plan details"
+        ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success" [disabled]="planForm.invalid">
+        <i class="fa-solid fa-plus me-1"></i> Save Plan
+        </button>
+    </form>
+    </div>
+
+</div>

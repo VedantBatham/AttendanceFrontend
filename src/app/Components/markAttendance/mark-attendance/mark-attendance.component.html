@@ -1,0 +1,14 @@
+<div class="context-wrapper d-flex align-items-center" style="height:100vh;background:linear-gradient(magenta,teal);">
+    <div class="container" style="background:linear-gradient(lightblue,darkblue);">
+    <h2>Mark Attendance</h2>
+
+    <form  enctype="multipart/form-data">
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" required />
+    </form>
+
+    <div *ngIf="message" >
+        <p class="text-light">{{ message }}</p>
+    </div>
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+/* mark-attendance.component.css */
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease; /* smooth transition for hover */
+  text-align: center;
+}
+
+.container:hover {
+  transform: scale(1.05); /* slightly increase size */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* stronger shadow */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #888;
+  background-color: #f0f0f0;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #2d2d2d;
+}

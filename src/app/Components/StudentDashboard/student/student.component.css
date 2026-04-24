@@ -1,0 +1,131 @@
+.student-dashboard {
+  width:100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f6f7fb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.topbar h1 {
+  font-size: 1.8rem;
+  color: #1d2030;
+  margin: 0;
+}
+
+.top-actions button {
+  background: none;
+  border: none;
+  color: #1d2030;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.top-actions button:hover {
+  color: #3d7eff;
+}
+
+
+.analytics-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.analytics-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.attendance-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 8px solid #4CAF50; /* progress color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #e8f5e9;
+}
+
+.percent {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* ===== Topics & Resources ===== */
+.topics-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.topic-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.topic-card:hover {
+  transform: translateY(-2px);
+}
+
+.topic-info h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.topic-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.resource-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resource-btn:hover {
+  background-color: #43a047;
+}
+
+.resource-btn i {
+  font-size: 1rem;
+}
